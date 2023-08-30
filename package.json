@@ -1,0 +1,23 @@
+{
+  "name": "wxlletup",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000W\u0000a\u0000l\u0000l\u0000e\u0000t\u0000U\u0000P\u0000\r\u0000 \u0000",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/D4MNssselery/WxlletUP.git)"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "js"
+  ],
+  "author": "D4MNssselery",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}
