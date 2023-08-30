@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(img/background.jpg) no-repeat;
+  background-position: cover ;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+header{
+  height: 7.5%;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  background: black;
+}
+
+.part1{
+  position: fixed;
+  font-size: 1.4em;
+  color: white;
+  user-select: none;
+}
+
+.part2{
+  padding-left: 75px;
+  position: relative;
+  font-size: 1.5em;
+  color: orangered;
+  user-select: none;
+}
+
+.navigation a{
+  position: relative;
+  font-size: 1.1em;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 80px;
+  margin-right: 35px;
+  justify-content: space-between;
+}
+
+.navigation .btnLogin-popup{
+  width: 140px;
+  height: 40px;
+  background:transparent;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-left: 45px;
+  margin-right:-55px;
+  color: white;
+}
+
+.wrapper{
+  position: absolute;
+  width: 377px;
+  height: 440px;
+  background: transparent;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  transform: scale(0);
+  transition: all .5s ease, all .2s ease;
+  z-index: 999999;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.wrapper.active-popup{
+  transform: scale(1);
+}
+
+.wrapper.active{
+  height: 480px;
+}
+
+.wrapper .form-box{
+  width: 100%;
+  padding: 50px;
+}
+
+.wrapper .form-box.Login{
+  transition: all .18s ease;
+  transform: translateX(0);
+}
+
+.wrapper.active .form-box.Login{
+  transition: none;
+  transform: translateX(-400px);
+}
+
+.wrapper .form-box.Register{
+  position: absolute;
+  transition: none;
+  transform: translateX(400px);
+}
+
+.wrapper.active .form-box.Register{
+  transition: all .18s ease;
+  transform: translateX(0);
+}
+
+.wrapper .close-icon{
+  position:absolute;
+  top: 0%;
+  right: 0%;
+  width: 45px;
+  height: 45px;
+  background: #162938;
+  font-size: 2em;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  cursor: pointer;
+  z-index: 1;
+  top: -2px;
+  right: -2.6px;
+}
+
+.form-box h2{
+  font-size: 2em;
+  color: #162938;
+  text-align: center;
+}
+
+.input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #162938;
+  margin: 30px 0;
+}
+
+.input-box label{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1.1em;
+  color: #162938;
+  font-weight: 500;
+  pointer-events: none;
+  transition:  .3s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+  top: -5px;
+}
+
+.input-box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #162938;
+  font-weight: 600;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em;
+  color: #162938;
+  line-height: 57px;
+}
+
+.parent1 {
+  white-space: nowrap;
+  font-size: 0;
+}
+
+.child1 {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 16px;
+  width: 46%;
+}
+
+.child2 {
+  width: 4%;
+  margin-right: 5px;
+}
+
+.child3 {
+  width: 50%;
+  text-align: right;
+}
+
+.remember-forgot input{
+  accent-color: #162938;
+  margin-right: 3px;
+}
+
+.game{
+  position: absolute;
+  justify-content: center;
+  margin-top: 10%;
+} 
+
+.child3 .a:hover {
+  background: #ffffff;
+  color: #166666;
+}
+
+.remember-forgot a{
+  color: #162999;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover{
+  text-decoration: underline
+}
+
+.btn{
+  width: 100%;
+  height: 49px;
+  background: #162938;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #ffffff;
+  font-weight: 500;
+  margin-top: 10%;
+}
+
+.login-register{
+  font-size: .9em;
+  color: #162938;
+  text-align: center;
+  font-weight: 500;
+  margin-top: 7px;
+}
+
+.login-register p a{
+  color: #162999;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-register p a:hover {
+  text-decoration: underline;
+}
+
+.form-box.Register h2{
+  margin-top: -8px;
+  font-size: 2em;
+  color: #162938;
+  text-align: center;
+}
+
+.register-login {
+  font-size: .9em;
+  color: #162938;
+  text-align: center;
+  font-weight: 500;
+  margin: 8px 0 10px;
+}
+
+.register-login p a{
+  color: #162999;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-login p a:hover {
+  text-decoration: underline;
+}
+
+.form-box.Register .btn{
+  width: 100%;
+  height: 49px;
+  background: #162938;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #ffffff;
+  font-weight: 500;
+  margin-top: 7%;
+}
+
+.wrapper .form-box.Register{
+  position: absolute;
+  transform: translateX(400px);
+}
+
+::selection{
+  color: #fff;
+  background: black;
+}
+
+.weewee{
+  padding: 25px;
+  background: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.details{
+  width: 100%;
+  margin-top: 15px;
+  padding: 0 20px;
+  border-radius: 7px;
+  background: #fff;
+  height: calc(100% / 4 - 50px);
+  justify-content: space-between;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.details p{
+  font-size: 20px;
+  height: 17px;
+  padding-right: 45px;
+  border-right: 1px solid #ccc;
+}
+
+.details p span{
+  margin-left: 8px;
+}
+
+.details p b{
+  font-weight: 500;
+}
+
+.details button{
+  cursor: pointer;
+  font-size: 15px;
+  color: black;
+  border-radius: 4.5px;
+  padding: 5px 10px;
+  background: #ffff;
+  border: 2px solid black;
+  transition: 0.2s ease;
+}
+
+.details button:hover{
+  color: #fff;
+  background: black;
+}
+
+.details{
+  margin-top: 10px;
+  padding: 0 15px;
+  height: calc(100% / 4 - 20px);
+}
+
+.details p{
+  height: 15px;
+  font-size: 17px;
+  padding-right: 13px;
+}
+
+.details button{
+  font-size: 13px;
+  padding: 5px 10px;
+  border: none;
+  color: #fff;
+  background: #6563ff;
+}
+
